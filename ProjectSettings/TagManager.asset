@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Undefined
+  - Battery
   layers:
   - Default
   - TransparentFX
@@ -13,11 +15,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PickUp
+  - Ground
+  - Background
+  - Trigger
+  - Player
   - 
   - 
   - 
@@ -40,4 +42,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1778166865
+    locked: 0
+  - name: PickUp
+    uniqueID: 2949481245
+    locked: 0
+  - name: PickUpParticles
+    uniqueID: 683697559
+    locked: 0
+  - name: Player
+    uniqueID: 3971027591
     locked: 0
