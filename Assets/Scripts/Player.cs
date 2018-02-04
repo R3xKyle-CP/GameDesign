@@ -12,7 +12,7 @@ public class Player : Singleton<Player> {
     public float airDamping = 5f;
     public float speed = 8f;
     public float maxSpeed = 8f;
-    public float batteryTimerInterval = 100f;
+    public float batteryTimerInterval = 100000000f;
 
     // private player attribute values
     private int battery;
@@ -61,7 +61,7 @@ public class Player : Singleton<Player> {
         if (Time.time > nextActionTime)
         {
             battery -= 1;
-            nextActionTime += batteryTimerInterval;
+            nextActionTime = Time.time + batteryTimerInterval;
             GameController.Instance.PlayerAttributeUpdate(GameController.BATTERY);
         }
 
@@ -105,6 +105,13 @@ public class Player : Singleton<Player> {
             anim.Play("Jump");
         }
 
+        /*
+        if (controller.isGrounded && Input.GetAxis("Vertical") < 0f)
+        {
+            // do stuff here
+            anim.Play("Slide");
+        }
+        */
 
         float smoothMovementFactor;
 

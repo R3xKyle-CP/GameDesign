@@ -892,12 +892,12 @@ Prefab:
     - target: {fileID: 198683265525935532, guid: d77a15a0ee8a6f94ca9e64c77caeddc1,
         type: 2}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 198683265525935532, guid: d77a15a0ee8a6f94ca9e64c77caeddc1,
         type: 2}
       propertyPath: ShapeModule.radius.value
-      value: 0.11
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 198683265525935532, guid: d77a15a0ee8a6f94ca9e64c77caeddc1,
         type: 2}
@@ -913,6 +913,11 @@ Prefab:
         type: 2}
       propertyPath: m_SortingLayer
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198683265525935532, guid: d77a15a0ee8a6f94ca9e64c77caeddc1,
+        type: 2}
+      propertyPath: ShapeModule.radiusThickness
+      value: 0.24
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d77a15a0ee8a6f94ca9e64c77caeddc1, type: 2}

@@ -1,0 +1,510 @@
+fileFormatVersion: 2
+guid: 363cc100e57f0064e8854f792b8578c7
+timeCreated: 1517689263
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_0
+    21300002: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_1
+    21300004: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_2
+    21300006: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_3
+    21300008: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_4
+    21300010: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_5
+    21300012: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_6
+    21300014: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_7
+    21300016: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_8
+    21300018: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_9
+    21300020: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_10
+    21300022: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_11
+    21300024: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_12
+    21300026: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_13
+    21300028: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_14
+    21300030: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_15
+    21300032: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_16
+    21300034: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_17
+    21300036: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_18
+    21300038: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_19
+    21300040: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_20
+    21300042: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_21
+    21300044: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_22
+    21300046: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_23
+    21300048: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_24
+    21300050: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_25
+    21300052: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_26
+    21300054: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_27
+    21300056: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_28
+    21300058: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_29
+    21300060: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_30
+    21300062: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_31
+    21300064: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_32
+    21300066: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_33
+    21300068: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_34
+    21300070: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_35
+    21300072: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_36
+    21300074: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_37
+    21300076: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_38
+    21300078: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_39
+    21300080: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_40
+    21300082: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_41
+    21300084: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_42
+    21300086: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_43
+    21300088: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_44
+    21300090: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_45
+    21300092: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_46
+    21300094: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_47
+    21300096: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_48
+    21300098: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_49
+    21300100: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_50
+    21300102: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_51
+    21300104: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_52
+    21300106: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_53
+    21300108: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_54
+    21300110: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_55
+    21300112: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_56
+    21300114: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_57
+    21300116: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_58
+    21300118: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_59
+    21300120: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_60
+    21300122: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_61
+    21300124: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_62
+    21300126: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_63
+    21300128: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_64
+    21300130: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_65
+    21300132: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_66
+    21300134: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_67
+    21300136: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_68
+    21300138: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_69
+    21300140: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_70
+    21300142: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_71
+    21300144: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_72
+    21300146: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_73
+    21300148: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_74
+    21300150: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_75
+    21300152: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_76
+    21300154: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_77
+    21300156: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_78
+    21300158: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_79
+    21300160: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_80
+    21300162: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_81
+    21300164: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_82
+    21300166: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_83
+    21300168: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_84
+    21300170: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_85
+    21300172: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_86
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 139
+        width: 62
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 139
+        width: 62
+        height: 92
+      alignment: 9
+      pivot: {x: 0.5096694, y: 0.5065165}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_2
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 139
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_3
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 140
+        width: 62
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_4
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 139
+        width: 65
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_5
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 139
+        width: 65
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_6
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 136
+        width: 77
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_7
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 139
+        width: 84
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_8
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 139
+        width: 94
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_9
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 139
+        width: 108
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_10
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 139
+        width: 117
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_11
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 139
+        width: 123
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_12
+      rect:
+        serializedVersion: 2
+        x: 1489
+        y: 139
+        width: 119
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_13
+      rect:
+        serializedVersion: 2
+        x: 1614
+        y: 139
+        width: 119
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_14
+      rect:
+        serializedVersion: 2
+        x: 1734
+        y: 139
+        width: 121
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_15
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 62
+        width: 92
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_16
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 65
+        width: 104
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_17
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 27
+        width: 62
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_18
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 15
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_19
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 15
+        width: 9
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_20
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 15
+        width: 9
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_21
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 15
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_22
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 0
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: paraoa_sprite_sheet___battery_bot__basic_enemy_1__by_x3ro_bit-d5tlzuv_23
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 3
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
