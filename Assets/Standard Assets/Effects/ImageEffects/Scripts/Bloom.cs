@@ -1,4 +1,4 @@
-using System;
+/*using System;
 using UnityEngine;
 
 
@@ -345,19 +345,16 @@ namespace UnityStandardAssets.ImageEffects
         }
 
         private void Vignette (float amount, RenderTexture from, RenderTexture to)
-        {
-            if (lensFlareVignetteMask)
-            {
-                screenBlend.SetTexture ("_ColorBuffer", lensFlareVignetteMask);
-                to.MarkRestoreExpected(); // using blending, RT restore expected
-                Graphics.Blit (from == to ? null : from, to, screenBlend, from == to ? 7 : 3);
-            }
-            else if (from != to)
-            {
-                Graphics.SetRenderTarget (to);
-                GL.Clear(false, true, Color.black); // clear destination to avoid RT restore
-                Graphics.Blit (from, to);
-            }
-        }
+		{
+			if (lensFlareVignetteMask) {
+				screenBlend.SetTexture ("_ColorBuffer", lensFlareVignetteMask);
+				to.MarkRestoreExpected (); // using blending, RT restore expected
+				Graphics.Blit (from == to ? null : from, to, screenBlend, from == to ? 7 : 3);
+			} else if (from != to) {
+				Graphics.SetRenderTarget (to);
+				GL.Clear (false, true, Color.black); // clear destination to avoid RT restore
+				Graphics.Blit (from, to);
+			}
+		}
+	}
 }*/
-}

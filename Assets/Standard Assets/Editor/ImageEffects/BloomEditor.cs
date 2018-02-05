@@ -1,4 +1,4 @@
-using System;
+/*using System;
 using UnityEditor;
 using UnityEngine;
 
@@ -163,4 +163,4 @@ namespace UnityStandardAssets.ImageEffects
             serObj.ApplyModifiedProperties();
         }
     }
-}
+}*/

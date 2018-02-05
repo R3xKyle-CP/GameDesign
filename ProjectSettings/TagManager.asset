@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Undefined
   - Battery
+  - Bat
   layers:
   - Default
   - TransparentFX
