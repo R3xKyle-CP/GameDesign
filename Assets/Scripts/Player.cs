@@ -185,16 +185,23 @@ public class Player : Singleton<Player> {
 
     void OnTriggerEnter2DEvent(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Battery")
-        {
-            PickUpItemAttributeUpdate(ref battery, collider, GameController.BATTERY);
-        }
-        else if (collider.gameObject.tag == "Health")
-        {
-            PickUpItemAttributeUpdate(ref health, collider, GameController.HEALTH);
-        }
+		if (collider.gameObject.tag == "Battery") {
+			PickUpItemAttributeUpdate (ref battery, collider, GameController.BATTERY);
+		} else if (collider.gameObject.tag == "Health") {
+			PickUpItemAttributeUpdate (ref health, collider, GameController.HEALTH);
+		} else if (collider.gameObject.tag == "Bat") {
+			
+		}
     }
-    
+	void enemyCollisionAttributeUpdate(ref int playerAttribute, Collider2D collider, int attribute){
+		if (playerAttribute <= 0)
+		{
+			return;
+		}
+		PickUp pickUp = collider.GetComponent<PickUp>();
+		playerAttribute = Mathf.Max(0, playerAttribute - pickUp.GetValue());
+		GameController.Instance.PlayerAttributeUpdate(attribute);
+	}
     void OnTriggerExit2DEvent(Collider2D collider)
     {
 
