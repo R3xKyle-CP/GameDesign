@@ -12,9 +12,11 @@ public class ShootGun : Singleton<ShootGun> {
 	public Vector2 offset = new Vector2(0.4f,0.1f);
 	public float cooldown = 1f;
 
+	private Animator anim;
+
 	// Use this for initialization
 	void Start () {
-
+		anim = GetComponent<Animator> ();
 	}
 
 	// Update is called once per frame
@@ -27,7 +29,7 @@ public class ShootGun : Singleton<ShootGun> {
 
 			StartCoroutine (CanShoot());
 
-			GetComponent<Animator> ().SetTrigger ("Shoot");
+			anim.Play ("Shoot");
 		}
 
 	}

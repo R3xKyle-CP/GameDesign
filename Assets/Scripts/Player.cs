@@ -14,6 +14,12 @@ public class Player : Singleton<Player> {
     public float maxSpeed = 8f;
     public float batteryTimerInterval = 100000000f;
 
+	public GameObject projectile;
+	public Vector2 bulletVelocity;
+	bool canShoot = true;
+	public Vector2 offset = new Vector2(0.4f,0.1f);
+	public float cooldown = 1f;
+
     // private player attribute values
     private int battery;
     private int health;
@@ -57,12 +63,24 @@ public class Player : Singleton<Player> {
         {
             return;
         }
+		if (Input.GetKeyDown(KeyCode.Y) && canShoot) {
+			GameObject go = (GameObject)Instantiate (projectile,(Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
+
+			go.GetComponent<Rigidbody2D> ().velocity = new Vector2 (bulletVelocity.x * transform.localScale.x, bulletVelocity.y);
+
+			StartCoroutine (CanShoot());
+
+			anim.Play ("Shoot");
+		}
 
         if (Time.time > nextActionTime)
         {
             battery -= 1;
             nextActionTime = Time.time + batteryTimerInterval;
             GameController.Instance.PlayerAttributeUpdate(GameController.BATTERY);
+			if (battery <= 0) {
+				GameController.Instance.PlayerDied();
+			}
         }
 
 
@@ -81,8 +99,10 @@ public class Player : Singleton<Player> {
             {
                 transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             }
+			if (controller.isGrounded) {
+				anim.Play("Run");
+			}
             
-            anim.Play("Run");
         }
         else if (horizontalSpeed > 0f)
         {
@@ -91,12 +111,16 @@ public class Player : Singleton<Player> {
             {
                 transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
             }
-            anim.Play("Run");
+			if (controller.isGrounded) {
+				anim.Play("Run");
+			}
         }
         else
         {
             normalizedHorizontalSpeed = 0;
-            anim.Play("Idle");
+			if (controller.isGrounded) {
+				anim.Play("Idle");
+			}
         }
 
         if (controller.isGrounded && Input.GetKeyDown("space"))
@@ -206,4 +230,10 @@ public class Player : Singleton<Player> {
     {
 
     }
+
+	IEnumerator CanShoot(){
+		canShoot = false;
+		yield return new WaitForSeconds (cooldown);
+		canShoot = true;
+	}
 }

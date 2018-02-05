@@ -43,7 +43,7 @@ public class GameController : Singleton<GameController> {
     }
 
 
-    void PlayerDied()
+    public void PlayerDied()
     {
         levelOverText.SetActive(true);
         levelOver = true;
