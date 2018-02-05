@@ -118,6 +118,21 @@ GameObject:
   m_PrefabParentObject: {fileID: 1146589697703948, guid: f12545881877ee149b9025ab3a465b24,
     type: 2}
   m_PrefabInternal: {fileID: 971760512}
+--- !u!114 &64048403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 64048402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e76ff44af6f41658f2e89c513b79d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1388258383773200, guid: fd95b444ff1df4ccb8429531ed43c209, type: 2}
+  velocity: {x: 5, y: 0}
+  offset: {x: 0.4, y: 0.1}
+  cooldown: 1
 --- !u!1 &181052079
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +547,10 @@ Prefab:
         type: 2}
       propertyPath: m_BodyType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146589697703948, guid: f12545881877ee149b9025ab3a465b24, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f12545881877ee149b9025ab3a465b24, type: 2}

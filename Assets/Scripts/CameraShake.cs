@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraShake : MonoBehaviour {
+public class CameraShake : Singleton<CameraShake> {
+
+	private CameraShake(){}
 
 	public Camera mainCam;
 
