@@ -26,6 +26,8 @@ public class ShootGun : Singleton<ShootGun> {
 			go.GetComponent<Rigidbody2D> ().velocity = new Vector2 (velocity.x * transform.localScale.x, velocity.y);
 
 			StartCoroutine (CanShoot());
+
+			GetComponent<Animator> ().SetTrigger ("Shoot");
 		}
 
 	}
