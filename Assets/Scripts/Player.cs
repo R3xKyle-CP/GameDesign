@@ -148,8 +148,8 @@ public class Player : Singleton<Player> {
             smoothMovementFactor = airDamping;
         }
 
-        Mathf.SmoothDamp(velocity.x, normalizedHorizontalSpeed * speed, ref velocity.x, Time.deltaTime * smoothMovementFactor, maxSpeed);
-        
+		//velocity.x = Mathf.SmoothDamp(velocity.x, normalizedHorizontalSpeed * speed, ref velocity.x, Time.deltaTime * smoothMovementFactor, maxSpeed);
+		velocity.x = Mathf.Lerp(velocity.x, normalizedHorizontalSpeed * speed, Time.deltaTime * smoothMovementFactor);
         // apply gravity
         velocity.y += gravity * Time.deltaTime;
 
