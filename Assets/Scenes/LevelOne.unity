@@ -474,6 +474,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCam: {fileID: 0}
+  shakeAmtX: 0.2
+  shakeAmtY: 0.3
 --- !u!1 &948170669
 GameObject:
   m_ObjectHideFlags: 0

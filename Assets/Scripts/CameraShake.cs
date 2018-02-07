@@ -8,6 +8,9 @@ public class CameraShake : Singleton<CameraShake> {
 
 	public Camera mainCam;
 
+	public float shakeAmtX;
+	public float shakeAmtY;
+
 	float shakeAmt = 0;
 
 	void Awake()
@@ -26,7 +29,7 @@ public class CameraShake : Singleton<CameraShake> {
 
 	void Update(){
 		if (Input.GetKeyDown (KeyCode.T)) {
-			Shake (0.1f, 0.2f);
+			Shake (shakeAmtX, shakeAmtY);
 		}
 	}
 
