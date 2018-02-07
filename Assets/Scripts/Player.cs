@@ -215,11 +215,12 @@ public class Player : Singleton<Player> {
 			PickUpItemAttributeUpdate (ref battery, collider, GameController.BATTERY);
 		} else if (collider.gameObject.tag == "Health") {
 			PickUpItemAttributeUpdate (ref health, collider, GameController.HEALTH);
-		} else if (collider.gameObject.tag == "Bat") {
+		} 
+		/*else if (collider.gameObject.tag == "Bat") {
 			
-		}
+		}*/
     }
-	void enemyCollisionAttributeUpdate(ref int playerAttribute, Collider2D collider, int attribute){
+	/*void enemyCollisionAttributeUpdate(ref int playerAttribute, Collider2D collider, int attribute){
 		if (playerAttribute <= 0)
 		{
 			return;
@@ -227,7 +228,7 @@ public class Player : Singleton<Player> {
 		PickUp pickUp = collider.GetComponent<PickUp>();
 		playerAttribute = Mathf.Max(0, playerAttribute - pickUp.GetValue());
 		GameController.Instance.PlayerAttributeUpdate(attribute);
-	}
+	}*/
     void OnTriggerExit2DEvent(Collider2D collider)
     {
 
