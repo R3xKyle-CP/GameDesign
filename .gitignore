@@ -44,6 +44,7 @@ test-results/
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
+[Uu]nityPackageManager/
 Assets/AssetStoreTools*
 
 # Visual Studio 2015 cache directory
