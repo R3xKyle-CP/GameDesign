@@ -123,9 +123,7 @@ public class Player : Singleton<Player> {
 			}
         }
 
-		print (controller.isGrounded);
-
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") && controller.isGrounded)
         {
             velocity.y = Mathf.Sqrt(2f * jumpHeight * -gravity);
             anim.Play("Jump");

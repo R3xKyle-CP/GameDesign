@@ -52,7 +52,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1146589697703948}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -175,6 +175,10 @@ MonoBehaviour:
   speed: 5
   maxSpeed: 8
   batteryTimerInterval: 1
+  projectile: {fileID: 0}
+  bulletVelocity: {x: 0, y: 0}
+  offset: {x: 0.4, y: 0.1}
+  cooldown: 1
 --- !u!212 &212156632908878614
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -207,7 +211,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -323939705
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3b4d2fdf256c31948a9ea467ae29ffbf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
