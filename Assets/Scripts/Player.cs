@@ -29,6 +29,8 @@ public class Player : Singleton<Player> {
     // private components
     private CharacterController2D controller;
     private Animator anim;
+    private Light light;
+    private float lightIntesity;
 
     // private variables affecting player movement
     private Vector3 velocity;
@@ -40,6 +42,8 @@ public class Player : Singleton<Player> {
     {
         anim = GetComponent<Animator>();
         controller = GetComponent<CharacterController2D>();
+        light = GetComponentInChildren<Light>();
+        lightIntesity = light.intensity;
 
         controller.onControllerCollidedEvent += OnControllerColliderEvent;
         controller.onTriggerEnterEvent += OnTriggerEnter2DEvent;
@@ -75,12 +79,30 @@ public class Player : Singleton<Player> {
 
         if (Time.time > nextActionTime)
         {
-            battery -= 1;
+            battery = Mathf.Max(0, battery - 1);
             nextActionTime = Time.time + batteryTimerInterval;
             GameController.Instance.PlayerAttributeUpdate(GameController.BATTERY);
 			if (battery <= 0) {
+                light.intensity = 0f;
 				GameController.Instance.PlayerDied();
 			}
+        }
+
+        if (battery >= 75)
+        {
+            light.intensity = lightIntesity;
+        }
+        else if (battery >= 50 && battery < 75)
+        {
+            light.intensity = lightIntesity * .8f;
+        }
+        else if (battery >= 25 && battery < 50)
+        {
+            light.intensity = lightIntesity * .6f;
+        }
+        else if (battery <= 25 && battery > 0)
+        {
+            light.intensity = lightIntesity * .4f;
         }
 
 
