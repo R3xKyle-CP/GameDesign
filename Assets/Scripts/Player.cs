@@ -216,6 +216,7 @@ public class Player : Singleton<Player> {
     void PlayerHit(int damageValue)
     {
         health = Mathf.Max(0, health - damageValue);
+        GameController.Instance.PlayerAttributeUpdate(GameController.HEALTH);
         
         if (health <= 0)
         {
@@ -227,18 +228,22 @@ public class Player : Singleton<Player> {
     void OnControllerColliderEvent(RaycastHit2D raycastHit)
     {
 
+        if(raycastHit.collider.gameObject.tag == "Enemy"){
+            PlayerHit(5);
+        }
     }
 
     void OnTriggerEnter2DEvent(Collider2D collider)
     {
 		if (collider.gameObject.tag == "Battery") {
 			PickUpItemAttributeUpdate (ref battery, collider, GameController.BATTERY);
+            Debug.Log("Got a battery");
 		} else if (collider.gameObject.tag == "Health") {
 			PickUpItemAttributeUpdate (ref health, collider, GameController.HEALTH);
 		} 
-		/*else if (collider.gameObject.tag == "Bat") {
-			
-		}*/
+		else if (collider.gameObject.tag == "Enemy") {
+			Debug.Log("HIT AN ENEMY");
+		}
     }
 	/*void enemyCollisionAttributeUpdate(ref int playerAttribute, Collider2D collider, int attribute){
 		if (playerAttribute <= 0)

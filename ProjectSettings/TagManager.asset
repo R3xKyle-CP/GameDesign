@@ -8,6 +8,7 @@ TagManager:
   - Battery
   - Bat
   - Cockroach
+  - Enemy
   layers:
   - Default
   - TransparentFX
