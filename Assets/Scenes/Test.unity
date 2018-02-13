@@ -14746,6 +14746,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 114105102205474492, guid: f12545881877ee149b9025ab3a465b24,
+        type: 2}
+      propertyPath: triggerMask.m_Bits
+      value: 8960
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f12545881877ee149b9025ab3a465b24, type: 2}
   m_IsPrefabParent: 0
@@ -19891,7 +19896,7 @@ GameObject:
   - component: {fileID: 911926288}
   - component: {fileID: 911926287}
   - component: {fileID: 911926293}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: Bat
   m_TagString: Bat
   m_Icon: {fileID: 0}
@@ -34610,7 +34615,7 @@ GameObject:
   - component: {fileID: 1686818299}
   - component: {fileID: 1686818304}
   - component: {fileID: 1686818303}
-  m_Layer: 12
+  m_Layer: 13
   m_Name: Cockroach
   m_TagString: Cockroach
   m_Icon: {fileID: 0}
