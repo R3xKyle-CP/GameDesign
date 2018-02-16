@@ -19,6 +19,7 @@ public class Player : Singleton<Player> {
 	bool canShoot = true;
 	public Vector2 offset = new Vector2(0.4f,0.1f);
 	public float cooldown = 1f;
+    public float hurtTime = 1;
 
     // private player attribute values
     private int battery;
@@ -28,6 +29,7 @@ public class Player : Singleton<Player> {
 
     // private components
     private CharacterController2D controller;
+    private Collider2D playerCollider;
     private Animator anim;
     private Light light;
     private float lightIntesity;
@@ -38,8 +40,11 @@ public class Player : Singleton<Player> {
 
     private Player() { }
 
+    Collider2D[] myColls;
+
     void Awake()
     {
+        myColls = GetComponents<Collider2D>();
         anim = GetComponent<Animator>();
         controller = GetComponent<CharacterController2D>();
         light = GetComponentInChildren<Light>();
@@ -215,14 +220,41 @@ public class Player : Singleton<Player> {
 
     void PlayerHit(int damageValue)
     {
+        StartCoroutine(HurtBlinker()); 
         health = Mathf.Max(0, health - damageValue);
         GameController.Instance.PlayerAttributeUpdate(GameController.HEALTH);
+       
         
         if (health <= 0)
         {
             GameController.Instance.levelOver = true;
             anim.Play("Dead");
         }
+    }
+
+    IEnumerator HurtBlinker(){
+        //Ignore collisions between enemy and players
+
+        int enemyLayer = LayerMask.NameToLayer("Enemy");
+        controller.platformMask = controller.platformMask & ~(1 << enemyLayer);
+        Debug.Log("in hurtblinker");
+
+        //Restart colliders so player can go through enemy after getting damaged
+        //myColls is an array of all of the player's colliders
+        foreach (Collider2D collider in myColls){
+            Debug.Log("restarted a collider");
+            collider.enabled = false;
+            collider.enabled = true;
+        }
+
+        //blink animations
+        anim.Play("alphaBlink");
+
+        //Re-Enable collisions
+        yield return new WaitForSeconds(hurtTime);
+
+        controller.platformMask = controller.platformMask | (1 << enemyLayer);
+
     }
 
     void OnControllerColliderEvent(RaycastHit2D raycastHit)
@@ -233,17 +265,23 @@ public class Player : Singleton<Player> {
         }
     }
 
+
+
     void OnTriggerEnter2DEvent(Collider2D collider)
     {
-		if (collider.gameObject.tag == "Battery") {
-			PickUpItemAttributeUpdate (ref battery, collider, GameController.BATTERY);
+        if (collider.gameObject.tag == "Battery")
+        {
+            PickUpItemAttributeUpdate(ref battery, collider, GameController.BATTERY);
             Debug.Log("Got a battery");
-		} else if (collider.gameObject.tag == "Health") {
-			PickUpItemAttributeUpdate (ref health, collider, GameController.HEALTH);
-		} 
-		else if (collider.gameObject.tag == "Enemy") {
-			Debug.Log("HIT AN ENEMY");
-		}
+        }
+        else if (collider.gameObject.tag == "Health")
+        {
+            PickUpItemAttributeUpdate(ref health, collider, GameController.HEALTH);
+        }
+        else if (collider.gameObject.tag == "Enemy")
+        {
+            Debug.Log("HIT AN ENEMY");
+        }
     }
 	/*void enemyCollisionAttributeUpdate(ref int playerAttribute, Collider2D collider, int attribute){
 		if (playerAttribute <= 0)
