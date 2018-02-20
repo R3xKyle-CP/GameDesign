@@ -30,10 +30,10 @@ public class GameController : Singleton<GameController> {
         switch (attribute)
         {
             case HEALTH:
-                healthText.text = "Health: " + Player.Instance.GetHealth().ToString();
+                healthText.text = "Health: " + PlayerController.Instance.GetHealth().ToString();
                 break;
             case BATTERY:
-                batteryText.text = "Battery: " + Player.Instance.GetBattery().ToString();
+                batteryText.text = "Battery: " + PlayerController.Instance.GetBattery().ToString();
                 break;
             default:
                 break;
@@ -47,5 +47,10 @@ public class GameController : Singleton<GameController> {
     {
         levelOverText.SetActive(true);
         levelOver = true;
+
+        int enemyLayer = LayerMask.NameToLayer("Enemy");
+        int playerLayer = LayerMask.NameToLayer("Player");
+
+        Physics2D.IgnoreLayerCollision(enemyLayer, playerLayer);
     }
 }
