@@ -20587,7 +20587,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!95 &911926287
 Animator:
   serializedVersion: 3
@@ -20639,7 +20639,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 2
 --- !u!212 &911926290
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -23286,6 +23286,34 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 423726, guid: 3d9c915367d35704bb15f7c558f8a764, type: 2}
   m_PrefabInternal: {fileID: 1029053584}
+--- !u!1 &1029177953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1029177954}
+  m_Layer: 13
+  m_Name: EdgeCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: -2349822300998112484, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1029177954
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1029177953}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.09, y: -2.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1686818302}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1032463810
 GameObject:
   m_ObjectHideFlags: 0
@@ -28775,6 +28803,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 444594526}
   m_RootOrder: 334
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1281521758
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1281521759}
+  m_Layer: 13
+  m_Name: WallCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: -4087464717476244675, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1281521759
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281521758}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.36, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1686818302}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1294454133
 GameObject:
@@ -35485,9 +35541,9 @@ GameObject:
   - component: {fileID: 1686818302}
   - component: {fileID: 1686818301}
   - component: {fileID: 1686818300}
-  - component: {fileID: 1686818299}
   - component: {fileID: 1686818304}
   - component: {fileID: 1686818303}
+  - component: {fileID: 1686818299}
   m_Layer: 13
   m_Name: Cockroach
   m_TagString: Enemy
@@ -35495,8 +35551,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &1686818299
-BoxCollider2D:
+--- !u!70 &1686818299
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -35507,19 +35563,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.24, y: 2.89}
-    newSize: {x: 4.24, y: 2.89}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.24, y: 2.89}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.08, y: 0}
+  m_Size: {x: 4.24, y: 3.07}
+  m_Direction: 1
 --- !u!50 &1686818300
 Rigidbody2D:
   serializedVersion: 4
@@ -35591,9 +35637,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1686818298}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.4, y: 1.53, z: 0}
+  m_LocalPosition: {x: 6.79, y: 11.89, z: 0}
   m_LocalScale: {x: 0.4267776, y: 0.45971468, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1281521759}
+  - {fileID: 1029177954}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -35625,6 +35673,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3f394faf2084ba68dfc0db288135a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveright: 1
+  wallCheck: {fileID: 1281521759}
+  wallCheckRadius: 0.1
+  whatIsWall:
+    serializedVersion: 2
+    m_Bits: 512
+  edgeCheck: {fileID: 1029177954}
 --- !u!1 &1687198002
 GameObject:
   m_ObjectHideFlags: 0
