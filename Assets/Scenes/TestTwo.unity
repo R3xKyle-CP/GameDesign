@@ -606,7 +606,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 85.3975, y: -4.356327}
@@ -1073,9 +1073,9 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 4294963199
-  hurtTime: 3
+  hurtTime: 1.5
   isGrounded: 0
-  canMoveInAir: 1
+  canMoveInAir: 0
   myColls: []
 --- !u!232 &913105436
 DistanceJoint2D:
