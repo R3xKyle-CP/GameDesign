@@ -10,7 +10,7 @@ public class PlayerController : Singleton<PlayerController>
     public float gravity = -2f;
     public float speed = 8f;
     public float maxSpeed = 8f;
-    public float batteryTimerInterval = 100f;
+    public float batteryTimerInterval = 0.5f;
 
     public LayerMask playerMask;
 
@@ -186,6 +186,7 @@ public class PlayerController : Singleton<PlayerController>
     {
         if (collision.gameObject.tag == "Battery" )
         {
+            Debug.Log("running into battery");
             PickUpItemAttributeUpdate(ref battery, collision, GameController.BATTERY);
         }
     }
@@ -247,6 +248,7 @@ public class PlayerController : Singleton<PlayerController>
 
     void PickUpItemAttributeUpdate(ref int playerAttribute, Collider2D collider, int attribute)
     {
+        Debug.Log("picking up the battery");
         if (playerAttribute >= 100)
         {
             return;

@@ -9,6 +9,7 @@ TagManager:
   - Bat
   - Cockroach
   - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -24,8 +25,8 @@ TagManager:
   - Trigger
   - Player
   - Enemy
-  - asda
-  - 
+  - Falling
+  - Platform
   - 
   - 
   - 

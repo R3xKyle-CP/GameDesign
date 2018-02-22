@@ -64,7 +64,7 @@ public class GrapplingHook : MonoBehaviour
 
             }
         }
-        line.SetPosition(1, joint.connectedBody.transform.TransformPoint(joint.connectedAnchor));
+        //line.SetPosition(1, joint.connectedBody.transform.TransformPoint(joint.connectedAnchor));
 
         if (Input.GetKey(KeyCode.E))
         {
