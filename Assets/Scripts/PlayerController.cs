@@ -14,11 +14,6 @@ public class PlayerController : Singleton<PlayerController>
 
     public LayerMask playerMask;
 
-    public GameObject projectile;
-    public Vector2 bulletVelocity;
-    bool canShoot = true;
-    public Vector2 offset = new Vector2(0.4f, 0.1f);
-    public float cooldown = 1f;
     public float hurtTime = 3f;
 
     // private player attribute values
@@ -29,7 +24,7 @@ public class PlayerController : Singleton<PlayerController>
 
     // private components
 
-    bool isGrounded = false;
+    public bool isGrounded = false;
     public bool canMoveInAir = true;
     //private CharacterController2D controller;
     private Rigidbody2D myBody;
@@ -259,7 +254,6 @@ public class PlayerController : Singleton<PlayerController>
         GameController.Instance.PlayerAttributeUpdate(attribute);
         Destroy(collider.gameObject);
     }
-
 
 
 }

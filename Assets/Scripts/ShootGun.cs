@@ -29,7 +29,11 @@ public class ShootGun : Singleton<ShootGun> {
 
 			StartCoroutine (CanShoot());
 
-			anim.Play ("Shoot");
+            if(!PlayerController.Instance.isGrounded){
+                anim.Play("JumpShoot");
+            }else{
+                anim.Play("Shoot");
+            }
 		}
 
 	}

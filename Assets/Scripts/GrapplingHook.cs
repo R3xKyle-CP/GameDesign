@@ -33,7 +33,7 @@ public class GrapplingHook : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetMouseButtonDown(0))
         {
             targetPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             targetPos.z = 0;
@@ -66,14 +66,14 @@ public class GrapplingHook : MonoBehaviour
         }
         //line.SetPosition(1, joint.connectedBody.transform.TransformPoint(joint.connectedAnchor));
 
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetMouseButtonDown(0))
         {
 
             line.SetPosition(0, transform.position);
         }
 
 
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetMouseButtonDown(0))
         {
             joint.enabled = false;
             line.enabled = false;
