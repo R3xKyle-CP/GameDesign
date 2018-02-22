@@ -20,11 +20,12 @@ public class Bat : MonoBehaviour {
 			transform.position += transform.forward * MoveSpeed * Time.deltaTime;
 		}*/
 		anim.Play ("idle");
-		float distance = Vector3.Distance( Player.Instance.transform.position, transform.position);
-		if (distance > 5) {
-			Vector3 delta = Player.Instance.transform.position - this.transform.position;
+		float distance = Vector3.Distance( PlayerController.Instance.transform.position, transform.position);
+		if (distance != 0) {
+			Vector3 delta = PlayerController.Instance.transform.position - this.transform.position;
 			delta.Normalize ();
 			float moveSpeed = 1 * Time.deltaTime;
+
 			transform.position = transform.position + (delta * moveSpeed);
 			horizontalSpeed = delta.x;
 
