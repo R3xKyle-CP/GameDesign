@@ -12,7 +12,7 @@ public class Player : Singleton<Player> {
     public float airDamping = 5f;
     public float speed = 8f;
     public float maxSpeed = 8f;
-    public float batteryTimerInterval = 100000000f;
+    public float batteryTimerInterval = 1f;
 
 	public GameObject projectile;
 	public Vector2 bulletVelocity;
