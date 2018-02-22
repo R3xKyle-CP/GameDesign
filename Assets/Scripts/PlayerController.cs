@@ -29,14 +29,14 @@ public class PlayerController : Singleton<PlayerController>
     //private CharacterController2D controller;
     private Rigidbody2D myBody;
     private Transform myTrans,tagGround;
-    private Collider2D playerCollider;
+    //private Collider2D playerCollider;
     private Animator anim;
     private Light light;
     private float lightIntesity;
     private bool facingRight;
 
     // private variables affecting player movement
-    private Vector3 velocity;
+    //private Vector3 velocity;
 
     //private float normalizedHorizontalSpeed = 0;
 
@@ -90,7 +90,10 @@ public class PlayerController : Singleton<PlayerController>
             if (battery <= 0)
             {
                 light.intensity = 0f;
+                anim.Play("Dead");
+                GameController.Instance.levelOver = true;
                 GameController.Instance.PlayerDied();
+
             }
         }
 
@@ -175,6 +178,12 @@ public class PlayerController : Singleton<PlayerController>
         if(collision.gameObject.tag == "Enemy" && GameController.Instance.levelOver != true){
             PlayerHit(25);
         }
+        if (collision.gameObject.tag == "Boundary")
+        {
+            anim.Play("Dead");
+            GameController.Instance.levelOver = true;
+            GameController.Instance.PlayerDied();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -184,6 +193,7 @@ public class PlayerController : Singleton<PlayerController>
             Debug.Log("running into battery");
             PickUpItemAttributeUpdate(ref battery, collision, GameController.BATTERY);
         }
+
     }
 
     void PlayerHit(int damageValue)
