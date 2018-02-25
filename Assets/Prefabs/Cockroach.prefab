@@ -22,7 +22,7 @@ GameObject:
   m_Layer: 13
   m_Name: EdgeCheck
   m_TagString: Untagged
-  m_Icon: {fileID: -2349822300998112484, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -37,7 +37,7 @@ GameObject:
   m_Layer: 13
   m_Name: WallCheck
   m_TagString: Untagged
-  m_Icon: {fileID: -4087464717476244675, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 70339911417202684}
   m_Layer: 13
   m_Name: Cockroach
-  m_TagString: Enemy
+  m_TagString: Cockroach
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,7 +81,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1269196701970384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.79, y: 11.89, z: 0}
+  m_LocalPosition: {x: -2.02, y: -10.11, z: 0}
   m_LocalScale: {x: 0.4267776, y: 0.45971468, z: 1}
   m_Children:
   - {fileID: 4066459048649710}
