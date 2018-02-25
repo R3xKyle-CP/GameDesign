@@ -1086,7 +1086,7 @@ MonoBehaviour:
     m_Bits: 4294963199
   hurtTime: 1.5
   isGrounded: 0
-  canMoveInAir: 0
+  canMoveInAir: 1
   myColls: []
 --- !u!232 &913105436
 DistanceJoint2D:
