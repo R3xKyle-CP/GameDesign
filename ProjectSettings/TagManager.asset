@@ -10,6 +10,8 @@ TagManager:
   - Cockroach
   - Enemy
   - Bullet
+  - Boundary
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
