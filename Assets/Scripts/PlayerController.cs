@@ -184,13 +184,23 @@ public class PlayerController : Singleton<PlayerController>
             GameController.Instance.levelOver = true;
             GameController.Instance.PlayerDied();
         }
+        if(collision.gameObject.tag == "MovingPlatform"){
+            myTrans.parent = collision.gameObject.transform;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "MovingPlatform")
+        {
+            myTrans.parent = null;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Battery" )
         {
-            Debug.Log("running into battery");
             PickUpItemAttributeUpdate(ref battery, collision, GameController.BATTERY);
         }
 
