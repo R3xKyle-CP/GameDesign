@@ -12,6 +12,7 @@ TagManager:
   - Bullet
   - Boundary
   - MovingPlatform
+  - Spike
   layers:
   - Default
   - TransparentFX

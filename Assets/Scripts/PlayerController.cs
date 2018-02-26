@@ -207,6 +207,12 @@ public class PlayerController : Singleton<PlayerController>
         {
             PickUpItemAttributeUpdate(ref battery, collision, GameController.BATTERY);
         }
+        if(collision.gameObject.tag == "Spike"){
+            myBody.velocity = new Vector2(0, 0);
+            Vector2 pushBack = new Vector2(0, 7);
+            myBody.AddForce(pushBack,ForceMode2D.Impulse);
+            PlayerHit(10);
+        }
 
     }
 
