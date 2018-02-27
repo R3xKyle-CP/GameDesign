@@ -175,10 +175,10 @@ public class PlayerController : Singleton<PlayerController>
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Cockroach" && GameController.Instance.levelOver != true){
+		if(collision.gameObject.tag == "Cockroach" && collision.gameObject.GetComponent<Cockroach>().getLive()>0  && GameController.Instance.levelOver != true){
             PlayerHit(25);
         }
-        if (collision.gameObject.tag == "Bat" && GameController.Instance.levelOver != true)
+		if (collision.gameObject.tag == "Bat" && collision.gameObject.GetComponent<Bat>().getLive()>0 && GameController.Instance.levelOver != true)
         {
             PlayerHit(25);
         }

@@ -52,7 +52,9 @@ public class Bat : MonoBehaviour {
 
 
 	}
-
+	public float getLive(){
+		return this.live;
+	}
 	public void decreaseLive(){
 		this.live -= 60;
 		return;
