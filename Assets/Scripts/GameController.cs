@@ -21,6 +21,7 @@ public class GameController : Singleton<GameController> {
     {
         if (levelOver && Input.GetMouseButtonDown(0))
         {
+            levelOver = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }	
