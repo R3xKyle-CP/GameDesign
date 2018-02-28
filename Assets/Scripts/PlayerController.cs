@@ -217,7 +217,7 @@ public class PlayerController : Singleton<PlayerController>
 
     }
 
-    void PlayerHit(int damageValue)
+    public void PlayerHit(int damageValue)
     {
         StartCoroutine(HurtBlinker());
         health = Mathf.Max(0, health - damageValue);
