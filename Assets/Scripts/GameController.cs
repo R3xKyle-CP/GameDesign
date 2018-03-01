@@ -12,7 +12,8 @@ public class GameController : Singleton<GameController> {
     public GameObject levelOverText;
     public Text healthText;
     public Text batteryText;
-    public bool levelOver;
+
+    public bool levelOver = false;
 
     private GameController() { }
 
@@ -21,8 +22,11 @@ public class GameController : Singleton<GameController> {
     {
         if (levelOver && Input.GetMouseButtonDown(0))
         {
-            levelOver = false;
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            levelOver = false;
+            int enemyLayer = LayerMask.NameToLayer("Enemy");
+            int playerLayer = LayerMask.NameToLayer("Player");
+            Physics2D.IgnoreLayerCollision(enemyLayer, playerLayer,false);
         }
     }	
 
