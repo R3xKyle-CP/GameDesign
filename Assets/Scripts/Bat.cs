@@ -7,6 +7,7 @@ public class Bat : MonoBehaviour {
 	float horizontalSpeed;
 	bool isDead = false;
 	float live = 100;
+	bool following = false;
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
@@ -26,7 +27,8 @@ public class Bat : MonoBehaviour {
 		} else {
 			anim.Play ("idle");
 			float distance = Vector3.Distance (PlayerController.Instance.transform.position, transform.position);
-			if (distance != 0 && distance<15) {
+			if ((distance != 0 && distance<15) || following) {
+				following = true;
 				Vector3 delta = PlayerController.Instance.transform.position - this.transform.position;
 				delta.Normalize ();
 				float moveSpeed = 1 * Time.deltaTime;
