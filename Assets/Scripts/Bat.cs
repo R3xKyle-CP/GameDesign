@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Bat : MonoBehaviour {
 	private Animator anim;
+    private Collider2D col;
 	float horizontalSpeed;
 	bool isDead = false;
 	float live = 100;
 	bool following = false;
+    public float speed;
+
 	// Use this for initialization
 	void Start () {
 		anim = GetComponent<Animator>();
+        col = GetComponent<Collider2D>();
 	}
 
 	// Update is called once per frame
@@ -23,6 +27,7 @@ public class Bat : MonoBehaviour {
 		if (live <= 0) {
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (0f, 0f);
 			anim.Play ("die");
+            col.enabled = false;
 			//Destroy (this);
 		} else {
 			anim.Play ("idle");
@@ -31,7 +36,7 @@ public class Bat : MonoBehaviour {
 				following = true;
 				Vector3 delta = PlayerController.Instance.transform.position - this.transform.position;
 				delta.Normalize ();
-				float moveSpeed = 1 * Time.deltaTime;
+				float moveSpeed = speed * Time.deltaTime;
 
 				transform.position = transform.position + (delta * moveSpeed);
 				horizontalSpeed = delta.x;
