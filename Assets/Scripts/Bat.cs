@@ -26,7 +26,7 @@ public class Bat : MonoBehaviour {
 		} else {
 			anim.Play ("idle");
 			float distance = Vector3.Distance (PlayerController.Instance.transform.position, transform.position);
-			if (distance != 0) {
+			if (distance != 0 && distance<15) {
 				Vector3 delta = PlayerController.Instance.transform.position - this.transform.position;
 				delta.Normalize ();
 				float moveSpeed = 1 * Time.deltaTime;
