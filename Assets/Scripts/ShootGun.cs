@@ -7,7 +7,8 @@ public class ShootGun : Singleton<ShootGun> {
 	private ShootGun(){}
 
 	public GameObject projectile;
-	public Vector2 velocity;
+	//public Vector2 velocity;
+	public float velocity = 5f;
 	bool canShoot = true;
 	public Vector2 offset = new Vector2(0.4f,0.1f);
 	public float cooldown = 1f;
@@ -20,13 +21,17 @@ public class ShootGun : Singleton<ShootGun> {
 	}
 
 	// Update is called once per frame
-	void Update () {
-
-		if (Input.GetKeyDown(KeyCode.Y) && canShoot) {
-			GameObject go = (GameObject)Instantiate (projectile,(Vector2)transform.position + offset * transform.localScale.x, Quaternion.identity);
-
-			go.GetComponent<Rigidbody2D> ().velocity = new Vector2 (velocity.x * transform.localScale.x, velocity.y);
-
+	void Update () { 
+		/* shoot the bullet in the direction of the right mouse click*/
+		if (Input.GetMouseButtonDown(1) && canShoot ){
+			Vector3 shootDirection;
+			shootDirection = Input.mousePosition;
+			shootDirection.z = 0.0f;
+			shootDirection = Camera.main.ScreenToWorldPoint(shootDirection);
+			shootDirection = shootDirection-transform.position;
+			//...instantiating the rocket
+			GameObject bulletInstance = (GameObject)Instantiate(projectile, transform.position, Quaternion.Euler(new Vector3(0,0,0))) ;
+			bulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(shootDirection.x * velocity, shootDirection.y * velocity);
 			StartCoroutine (CanShoot());
 
             if(!PlayerController.Instance.isGrounded){
