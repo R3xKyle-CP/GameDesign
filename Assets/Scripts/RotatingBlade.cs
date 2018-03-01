@@ -18,6 +18,7 @@ public class RotatingBlade : MonoBehaviour {
 
     /*private void OnTriggerEnter2D()
     {
+        Debug.Log("hit!");
         PlayerController.Instance.PlayerHit(25);
     }*/
 }
