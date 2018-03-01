@@ -28,7 +28,7 @@ public class PlayerController : Singleton<PlayerController>
     public bool canMoveInAir = true;
     //private CharacterController2D controller;
     private Rigidbody2D myBody;
-    private Transform myTrans,tagGround;
+    public Transform myTrans,tagGround;
     //private Collider2D playerCollider;
     private Animator anim;
     private Light light;
@@ -213,6 +213,14 @@ public class PlayerController : Singleton<PlayerController>
             Vector2 pushBack = new Vector2(0, 7);
             myBody.AddForce(pushBack,ForceMode2D.Impulse);
             PlayerHit(10);
+        }
+
+        if (collision.gameObject.tag == "Blade")
+        {
+            myBody.velocity = new Vector2(0, 0);
+            Vector2 pushBack = new Vector2(0, 7);
+            myBody.AddForce(pushBack, ForceMode2D.Impulse);
+            PlayerHit(25);
         }
 
     }

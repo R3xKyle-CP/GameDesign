@@ -22,9 +22,14 @@ public class GrapplingHook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        line.SetPosition(0, transform.position);
+        line.SetPosition(1, hit.point);
+        Debug.Log("Inside of update");
         if (joint.distance > .5f)
+        {
             joint.distance -= step;
+            Debug.Log("Inside the if");
+        }
         else
         {
             line.enabled = false;
@@ -41,8 +46,17 @@ public class GrapplingHook : MonoBehaviour
             hit = Physics2D.Raycast(transform.position, targetPos - transform.position, distance, mask);
 
             if (hit.collider != null && hit.collider.gameObject.GetComponent<Rigidbody2D>() != null)
-
             {
+                Debug.Log(hit.collider.gameObject.tag);
+                if (hit.collider.gameObject.tag == "MovingPlatform")
+                {
+                    Debug.Log("Inside moving platform if");
+                    joint.transform.parent = hit.collider.gameObject.transform;
+                    line.transform.parent = hit.collider.gameObject.transform;
+                    //PlayerController.Instance.myTrans.parent = hit.collider.gameObject.transform;
+
+                }
+
                 joint.enabled = true;
                 //	Debug.Log (hit.point - new Vector2(hit.collider.transform.position.x,hit.collider.transform.position.y);
                 Vector2 connectPoint = hit.point - new Vector2(hit.collider.transform.position.x, hit.collider.transform.position.y);
@@ -60,8 +74,6 @@ public class GrapplingHook : MonoBehaviour
                 line.SetPosition(1, hit.point);
 
                 //line.GetComponent<roperatio>().grabPos = hit.point;
-
-
             }
         }
         //line.SetPosition(1, joint.connectedBody.transform.TransformPoint(joint.connectedAnchor));
@@ -77,6 +89,8 @@ public class GrapplingHook : MonoBehaviour
         {
             joint.enabled = false;
             line.enabled = false;
+            PlayerController.Instance.myTrans.parent = null;
+
         }
 
     }

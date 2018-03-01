@@ -16,8 +16,8 @@ public class RotatingBlade : MonoBehaviour {
 		this.transform.Rotate(new Vector3(0,0,rotationSpeed));
 	}
 
-    private void OnTriggerEnter2D()
+    /*private void OnTriggerEnter2D()
     {
         PlayerController.Instance.PlayerHit(25);
-    }
+    }*/
 }
