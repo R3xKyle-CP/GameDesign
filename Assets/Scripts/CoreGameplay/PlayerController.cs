@@ -25,7 +25,7 @@ public class PlayerController : Singleton<PlayerController>
     // private components
 
     public bool isGrounded = false;
-    public bool canMoveInAir = true;
+    private bool canMoveInAir = true;
     //private CharacterController2D controller;
     private Rigidbody2D myBody;
     public Transform myTrans,tagGround;
