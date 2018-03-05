@@ -1,4 +1,8 @@
-﻿using System.Collections;
+﻿/*
+ *Kyle Ringler wrote all of this script
+*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

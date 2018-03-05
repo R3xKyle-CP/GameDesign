@@ -17,7 +17,10 @@ public class GameController : Singleton<GameController> {
 
     private GameController() { }
 
-    // Update is called once per frame
+    ///</Michael>
+    ///If the player is dead, the can press the mouse button to restart the level
+    ///Resets the physics layers so that the player takes damage from the obstacles again
+    ///</Michael>
     void Update()
     {
         if (levelOver && Input.GetMouseButtonDown(0))
@@ -29,7 +32,9 @@ public class GameController : Singleton<GameController> {
             Physics2D.IgnoreLayerCollision(enemyLayer, playerLayer,false);
         }
     }	
-
+    ///<Kyle>
+    ///Updates the players battery and health value
+    ///</Kyle>
     public void PlayerAttributeUpdate(int attribute)
     {
         switch (attribute)
@@ -47,7 +52,10 @@ public class GameController : Singleton<GameController> {
 
     }
 
-
+    ///<Michael>
+    ///Display the level over text when the player dies
+    ///Disable the collisions between players and enemies 
+    ///</Michael>
     public void PlayerDied()
     {
         levelOverText.SetActive(true);

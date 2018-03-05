@@ -20,7 +20,12 @@ public class ShootGun : Singleton<ShootGun> {
 		anim = GetComponent<Animator> ();
 	}
 
-	// Update is called once per frame
+	///<MichaelJiaqing>
+	///Shoot a bullet when the right mouse button is clicked
+	///Bullet is shot towards the direction of the mouse cursor
+	///Michael did shooting logic, instantiating the bullet
+	///Jiaqing did the shoot on right clicj and shoot towards cursor
+	///</MichaelJiaqing>
 	void Update () { 
 		/* shoot the bullet in the direction of the right mouse click*/
 		if (Input.GetMouseButtonDown(1) && canShoot ){
@@ -43,6 +48,9 @@ public class ShootGun : Singleton<ShootGun> {
 
 	}
 
+	///<Michael>
+	///Cooldown for shooting
+	///</Michael>
 	IEnumerator CanShoot(){
 		canShoot = false;
 		yield return new WaitForSeconds (cooldown);

@@ -24,11 +24,11 @@ public class GrapplingHook : MonoBehaviour
     {
         line.SetPosition(0, transform.position);
         line.SetPosition(1, hit.point);
-        Debug.Log("Inside of update");
+        //Debug.Log("Inside of update");
         if (joint.distance > .5f)
         {
             joint.distance -= step;
-            Debug.Log("Inside the if");
+            //Debug.Log("Inside the if");
         }
         else
         {
@@ -50,7 +50,6 @@ public class GrapplingHook : MonoBehaviour
                 Debug.Log(hit.collider.gameObject.tag);
                 if (hit.collider.gameObject.tag == "MovingPlatform")
                 {
-                    Debug.Log("Inside moving platform if");
                     joint.transform.parent = hit.collider.gameObject.transform;
                     line.transform.parent = hit.collider.gameObject.transform;
                     //PlayerController.Instance.myTrans.parent = hit.collider.gameObject.transform;

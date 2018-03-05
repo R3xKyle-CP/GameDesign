@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//THIS SCRIPT IS NOT USED IN OUR GAME
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Prime31;

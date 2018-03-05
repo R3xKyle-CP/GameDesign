@@ -11,7 +11,9 @@ public class RotatingBlade : MonoBehaviour {
 		
 	}
 	
-	// Update is called once per frame
+	///<Michael>
+	///Rotate the blade
+	///</Michael>
 	void FixedUpdate () {
 		this.transform.Rotate(new Vector3(0,0,rotationSpeed));
 	}

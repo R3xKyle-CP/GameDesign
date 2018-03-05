@@ -15,20 +15,22 @@ public class Bullet : MonoBehaviour {
 	}
 	void OnTriggerEnter2D(Collider2D collision)
 	{
-		//this.gameObject.SetActive (false);
+		///<MichaelAnnie>
+		//If the bullet collides with an enemy, then deal damage to the enemy
+		///</MichaelAnnie>
 		if (collision.gameObject.CompareTag ("Bat") ) 
 		{
 			
 			collision.gameObject.GetComponent<Bat> ().decreaseLive ();
-			//this.gameObject.SetActive (false);
 		}
 		if (collision.gameObject.CompareTag ("Cockroach") ) 
 		{
 			
 			collision.gameObject.GetComponent<Cockroach> ().decreaseLive ();
-			//Destroy (this);
-			//this.gameObject.SetActive (false);
 		}
+		///<MichaelAnnie>
+		//Otherwise the bullet is set as inactive
+		///</MichaelAnnie>
 		if (!collision.gameObject.CompareTag ("Player") ){
 			this.gameObject.SetActive (false);
 		}

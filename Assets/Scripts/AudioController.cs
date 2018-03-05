@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ *Kyle Ringler wrote this entire script
+*/
+
+
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
 

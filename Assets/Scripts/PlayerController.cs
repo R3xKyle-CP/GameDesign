@@ -44,6 +44,7 @@ public class PlayerController : Singleton<PlayerController>
 
     public Collider2D[] myColls;
 
+    ///Get the components
     void Awake()
     {
         myBody = this.GetComponent<Rigidbody2D>();
@@ -72,16 +73,28 @@ public class PlayerController : Singleton<PlayerController>
         {
             return;
         }
+
+        ///<Michael>
+        ///Use a linecast to determine if the player is grounded or not
+        ///Get "horizontal" input from player and call the Move() function to move player
+        ///Flip the player when changing directions
+        ///</Michael>
         isGrounded = Physics2D.Linecast(myTrans.position, tagGround.position,playerMask);
         float horizontalSpeed = Input.GetAxisRaw("Horizontal");
-
         Move(horizontalSpeed);
         Flip(horizontalSpeed);
+
+        ///Call jump function when "Jump" input is pressed
         if (Input.GetButtonDown("Jump")){
             Jump();
             anim.Play("Jump");
         }
 
+        ///<Kyle>
+        ///Decrement the battery as time goes one, and update the value
+        ///Decrease the light as the battery dies
+        ///If the battery runs out the player is dead
+        ///</Kyle>
         if (Time.time > nextActionTime) 
         {
             battery = Mathf.Max(0, battery - 1);
@@ -96,7 +109,6 @@ public class PlayerController : Singleton<PlayerController>
 
             }
         }
-
         if (battery >= 75)
         {
             light.intensity = lightIntesity;
@@ -114,7 +126,9 @@ public class PlayerController : Singleton<PlayerController>
             light.intensity = lightIntesity * .4f;
         }
     }
-
+    ///<Michael>
+    ///Move the player and call the animations corresponding to the movement
+    ///</Michael>
     public void Move(float horizontalInput)
     {
         if(!canMoveInAir && !isGrounded)
@@ -155,13 +169,18 @@ public class PlayerController : Singleton<PlayerController>
 
     }
 
+    ///<Michael>
+    ///Jumo function, add a verticle velocity to the player
+    ///</Michael>
     public void Jump(){
         if(isGrounded){
             myBody.velocity += jumpHeight * Vector2.up;
         }
 
     }
-
+    ///<Michael>
+    ///Flip the player sprite when changing directions
+    ///</Michael>
     private void Flip(float horizontal){
         if((horizontal > 0 && !facingRight) || (horizontal < 0 && facingRight)){
             facingRight = !facingRight;
@@ -175,6 +194,9 @@ public class PlayerController : Singleton<PlayerController>
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        ///<Annie>
+        ///
+        ///</Annie>
 		if(collision.gameObject.tag == "Cockroach" && collision.gameObject.GetComponent<Cockroach>().getLive()>0  && GameController.Instance.levelOver != true){
             PlayerHit(25);
         }
@@ -182,17 +204,28 @@ public class PlayerController : Singleton<PlayerController>
         {
             PlayerHit(25);
         }
+        ///<Michael>
+        ///If the player goes outside the play zone the die
+        ///</Michael>
         if (collision.gameObject.tag == "Boundary")
         {
             anim.Play("Dead");
             GameController.Instance.levelOver = true;
             GameController.Instance.PlayerDied();
         }
+        ///</Michael>
+        ///If the player touches a moving platform, they
+        ///become a child of the platform, moving along with it
+        ///</Michael>
         if(collision.gameObject.tag == "MovingPlatform"){
+            Debug.Log("on a moving platform");
             myTrans.parent = collision.gameObject.transform;
         }
     }
-
+    ///</Michael>
+    ///When the player leaves moving platform they are not
+    /// longer a child
+    ///</Michael>
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "MovingPlatform")
@@ -203,10 +236,16 @@ public class PlayerController : Singleton<PlayerController>
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        ///<Kyle>
+        ///update the player battery level when a battery is picked up
+        ///</Kyle>
         if (collision.gameObject.tag == "Battery" )
         {
             PickUpItemAttributeUpdate(ref battery, collision, GameController.BATTERY);
         }
+        ///<Michael>
+        ///if the player collides with a spike of blade, the take damage and bounce up
+        ///</Michael>
         if(collision.gameObject.tag == "Spike"){
             Debug.Log("spike");
             myBody.velocity = new Vector2(0, 0);
@@ -225,6 +264,12 @@ public class PlayerController : Singleton<PlayerController>
 
     }
 
+    ///<Michael>
+    ///When the player takes damage, call hurtblinker,
+    ///play the blink animation
+    ///update the player health
+    ///check if the player is dead
+    ///</Michael>
     public void PlayerHit(int damageValue)
     {
         StartCoroutine(HurtBlinker());
@@ -242,6 +287,11 @@ public class PlayerController : Singleton<PlayerController>
 
     }
 
+    ///<Michael>
+    ///give the player a couple of seconds when they are damaged 
+    ///where they are not able to be damaged by anything,
+    ///invincibility frames in essence
+    ///</Michael>
     IEnumerator HurtBlinker()
     {
         //Ignore collisions between enemy and players
@@ -280,9 +330,11 @@ public class PlayerController : Singleton<PlayerController>
         return battery;
     }
 
+    ///<Kyle>
+    ///update the player values when something is picked up
+    ///</Kyle>
     void PickUpItemAttributeUpdate(ref int playerAttribute, Collider2D collider, int attribute)
     {
-        Debug.Log("picking up the battery");
         if (playerAttribute >= 100)
         {
             return;

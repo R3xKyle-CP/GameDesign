@@ -1,4 +1,5 @@
-﻿using UnityEngine.Audio;
+﻿//Kyle Ringler wrote this script
+using UnityEngine.Audio;
 using UnityEngine;
 using System;
 
