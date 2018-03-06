@@ -36783,7 +36783,7 @@ MonoBehaviour:
   levelOverText: {fileID: 1172742702}
   healthText: {fileID: 541136129}
   batteryText: {fileID: 213706550}
-  memoryText: {fileID: 0}
+  memoryText: {fileID: 1723290117}
   levelOver: 0
 --- !u!4 &1634923087
 Transform:
