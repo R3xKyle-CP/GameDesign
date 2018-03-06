@@ -19,7 +19,7 @@ public class PlayerController : Singleton<PlayerController>
     // private player attribute values
     private int battery;
     private int health;
-
+	private int memory;
     private float nextActionTime = 0.0f;
 
     // private components
@@ -62,9 +62,11 @@ public class PlayerController : Singleton<PlayerController>
         facingRight = true;
         battery = 100;
         health = 100;
+		memory = 0;
         nextActionTime = Time.time + (2 * batteryTimerInterval);
         GameController.Instance.PlayerAttributeUpdate(GameController.BATTERY);
         GameController.Instance.PlayerAttributeUpdate(GameController.HEALTH);
+		GameController.Instance.PlayerAttributeUpdate(GameController.MEMORY);
     }
 
     void Update()
@@ -243,6 +245,10 @@ public class PlayerController : Singleton<PlayerController>
         {
             PickUpItemAttributeUpdate(ref battery, collision, GameController.BATTERY);
         }
+		if (collision.gameObject.tag == "Disk" )
+		{
+			PickUpItemAttributeUpdate(ref memory, collision, GameController.MEMORY);
+		}
         ///<Michael>
         ///if the player collides with a spike of blade, the take damage and bounce up
         ///</Michael>
@@ -329,7 +335,10 @@ public class PlayerController : Singleton<PlayerController>
     {
         return battery;
     }
-
+	public int GetMemory()
+	{
+		return memory;
+	}
     ///<Kyle>
     ///update the player values when something is picked up
     ///</Kyle>

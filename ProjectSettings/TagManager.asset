@@ -14,6 +14,7 @@ TagManager:
   - MovingPlatform
   - Spike
   - Blade
+  - Disk
   layers:
   - Default
   - TransparentFX

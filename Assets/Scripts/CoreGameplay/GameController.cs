@@ -8,11 +8,11 @@ public class GameController : Singleton<GameController> {
 
     public const int HEALTH = 1;
     public const int BATTERY = 2;
-
+	public const int MEMORY = 3;
     public GameObject levelOverText;
     public Text healthText;
     public Text batteryText;
-
+	public Text memoryText;
     public bool levelOver = false;
 
     private GameController() { }
@@ -45,6 +45,9 @@ public class GameController : Singleton<GameController> {
             case BATTERY:
                 batteryText.text = "Battery: " + PlayerController.Instance.GetBattery().ToString();
                 break;
+			case MEMORY:
+				memoryText.text = "Memory: " + PlayerController.Instance.GetMemory().ToString();
+				break;
             default:
                 break;
 
