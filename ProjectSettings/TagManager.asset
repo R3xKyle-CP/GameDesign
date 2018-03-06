@@ -15,6 +15,7 @@ TagManager:
   - Spike
   - Blade
   - Disk
+  - Boss_Max_Boundary
   layers:
   - Default
   - TransparentFX
