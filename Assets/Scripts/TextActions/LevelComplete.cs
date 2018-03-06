@@ -11,11 +11,22 @@ public class LevelComplete : MonoBehaviour
     /// <Michael>
     /// Disables and Enables a new tutorial text
     /// </Michael>
-    private void OnTriggerEnter2D(Collider2D collision)
+    public string nextLevel;
+    private bool levelDone = false;
+
+	private void Update()
+	{
+        if (levelDone && Input.GetMouseButtonDown(0))
+        {
+            SceneManager.LoadScene(nextLevel);
+        }
+	}
+	private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
             levelOverText.SetActive(true);
+            levelDone = true;
         }
     }
 }
