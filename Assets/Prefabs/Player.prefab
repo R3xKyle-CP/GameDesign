@@ -239,7 +239,7 @@ MonoBehaviour:
   batteryTimerInterval: 0.5
   playerMask:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 4294963199
   hurtTime: 3
   isGrounded: 0
   myTrans: {fileID: 0}

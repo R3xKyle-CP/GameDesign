@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*
+ * Followed this tutorial:
+ * https://www.youtube.com/watch?v=24YR_Uy-MyA&t=843s
+ */
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
