@@ -16,6 +16,8 @@ TagManager:
   - Blade
   - Disk
   - Boss_Max_Boundary
+  - Boss
+  - Ground
   layers:
   - Default
   - TransparentFX
