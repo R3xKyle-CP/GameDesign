@@ -14,7 +14,9 @@ public class GameController : Singleton<GameController> {
     public Text batteryText;
 	public Text memoryText;
     public bool levelOver = false;
-
+	public SimpleHealthBar healthBar;
+	public SimpleHealthBar shieldBar;
+	public Text memoryBarText;
     private GameController() { }
 
     ///</Michael>
@@ -39,14 +41,17 @@ public class GameController : Singleton<GameController> {
     {
         switch (attribute)
         {
-            case HEALTH:
-                healthText.text = "Health: " + PlayerController.Instance.GetHealth().ToString();
-                break;
+			case HEALTH:
+				healthText.text = "Health: " + PlayerController.Instance.GetHealth ().ToString ();
+				healthBar.UpdateBar (PlayerController.Instance.GetHealth (), 100.0f);
+            	break;
             case BATTERY:
-                batteryText.text = "Battery: " + PlayerController.Instance.GetBattery().ToString();
+				batteryText.text = "Battery: " + PlayerController.Instance.GetBattery().ToString();
+				shieldBar.UpdateBar (PlayerController.Instance.GetBattery (), 100.0f);
                 break;
 			case MEMORY:
 				memoryText.text = "Memory: " + PlayerController.Instance.GetMemory().ToString();
+				memoryBarText.text = "Memory: "+ PlayerController.Instance.GetMemory().ToString();
 				break;
             default:
                 break;
