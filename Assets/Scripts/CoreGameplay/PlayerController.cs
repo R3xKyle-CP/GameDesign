@@ -211,6 +211,11 @@ public class PlayerController : Singleton<PlayerController>
         {
             PlayerHit(25);
         }
+		if (collision.gameObject.CompareTag("Boss") && GameController.Instance.levelOver != true) {
+			Debug.Log ("Player hit by boss");
+			PlayerHit (50);
+		}
+
         ///<Michael>
         ///If the player goes outside the play zone the die
         ///</Michael>

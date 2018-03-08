@@ -6,8 +6,10 @@ public class Boss : MonoBehaviour {
 
 	public Animator anim;
 	public Rigidbody2D rb2d;
+	public Collider2D col;
 
-	public int direction = -1;
+	public int direction = 1;
+	public float live = 100;
 
 	private float moveSpeed = 10f;
 
@@ -15,11 +17,18 @@ public class Boss : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator> ();
 		rb2d = GetComponent<Rigidbody2D> ();
+		col = GetComponent<Collider2D> ();
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		BossWalking ();
+	void FixedUpdate () {
+		if (live <= 0) {
+			rb2d.velocity = new Vector2 (0f, 0f);
+			anim.Play ("Boss_Dying");
+			col.enabled = false;
+		} else {
+			BossWalking ();
+		}
 	}
 
 	void BossWalking()
@@ -28,15 +37,15 @@ public class Boss : MonoBehaviour {
 		{
 			//moving left
 			case -1:
-				transform.localScale = new Vector3 (transform.localScale.x, transform.localScale.y, -transform.localScale.z);
+				transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 				rb2d.velocity = new Vector2 (-moveSpeed, rb2d.velocity.y);
-				anim.Play ("Boss_Walking");
+				//anim.Play ("Boss_Walk");
 				break;
 
 			case 1:
-				transform.localScale = new Vector3 (transform.localScale.x, transform.localScale.y, transform.localScale.z);
+				//transform.localScale = new Vector3 (transform.localScale.x, transform.localScale.y, transform.localScale.z);
 				rb2d.velocity = new Vector2 (moveSpeed, rb2d.velocity.y);
-				anim.Play ("Boss_Walking");
+				//anim.Play ("Boss_Walk");
 				break;
 
 			break;
@@ -46,6 +55,13 @@ public class Boss : MonoBehaviour {
 	void BossRunning()
 	{
 
+	}
+
+	public void decreaseLive()
+	{
+		Debug.Log ("Decreased Boss Life");
+		this.live -= 10;
+		return;
 	}
 
 	void OnTriggerEnter2D(Collider2D other)

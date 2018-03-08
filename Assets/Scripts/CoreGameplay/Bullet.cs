@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 	void OnTriggerEnter2D(Collider2D collision)
 	{
 		///<MichaelAnnie>
@@ -27,6 +18,10 @@ public class Bullet : MonoBehaviour {
 		{
 			
 			collision.gameObject.GetComponent<Cockroach> ().decreaseLive ();
+		}
+		if (collision.gameObject.CompareTag ("Boss")) {
+			
+			collision.gameObject.GetComponent<Boss> ().decreaseLive ();
 		}
 		///<MichaelAnnie>
 		//Otherwise the bullet is set as inactive
