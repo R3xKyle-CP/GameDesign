@@ -9050,11 +9050,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4048041066325744, guid: 401471b9d0d65458cb55eab2507865dc, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 22.9
+      value: 19.61
       objectReference: {fileID: 0}
     - target: {fileID: 4048041066325744, guid: 401471b9d0d65458cb55eab2507865dc, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 5.6
+      value: 5.97
       objectReference: {fileID: 0}
     - target: {fileID: 4048041066325744, guid: 401471b9d0d65458cb55eab2507865dc, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9085,6 +9085,21 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 120299604}
+    - target: {fileID: 20723680380972440, guid: 401471b9d0d65458cb55eab2507865dc,
+        type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20723680380972440, guid: 401471b9d0d65458cb55eab2507865dc,
+        type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20723680380972440, guid: 401471b9d0d65458cb55eab2507865dc,
+        type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 401471b9d0d65458cb55eab2507865dc, type: 2}
   m_IsPrefabParent: 0
