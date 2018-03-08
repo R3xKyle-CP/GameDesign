@@ -221,6 +221,7 @@ public class PlayerController : Singleton<PlayerController>
         ///</Michael>
         if (collision.gameObject.tag == "Boundary")
         {
+            Debug.Log("boundary");
             anim.Play("Dead");
             GameController.Instance.levelOver = true;
             GameController.Instance.PlayerDied();
