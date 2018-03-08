@@ -7,6 +7,7 @@ public class Boss : MonoBehaviour {
 	public Animator anim;
 	public Rigidbody2D rb2d;
 	public Collider2D col;
+    public Transform myTrans;
 
 	public int direction = 1;
 	public float live = 100;
@@ -15,6 +16,7 @@ public class Boss : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        myTrans = GetComponent<Transform>();
 		anim = GetComponent<Animator> ();
 		rb2d = GetComponent<Rigidbody2D> ();
 		col = GetComponent<Collider2D> ();
@@ -36,13 +38,13 @@ public class Boss : MonoBehaviour {
 		switch(direction)
 		{
 			//moving left
-			case -1:
-				transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+			case 1:
+				//transform.localScale = new Vector3 (-transform.localScale.x, transform.localScale.y, transform.localScale.z);
 				rb2d.velocity = new Vector2 (-moveSpeed, rb2d.velocity.y);
 				//anim.Play ("Boss_Walk");
 				break;
 
-			case 1:
+			case -1:
 				//transform.localScale = new Vector3 (transform.localScale.x, transform.localScale.y, transform.localScale.z);
 				rb2d.velocity = new Vector2 (moveSpeed, rb2d.velocity.y);
 				//anim.Play ("Boss_Walk");
@@ -67,6 +69,12 @@ public class Boss : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "Boss_Max_Boundary") {
+            Vector3 theScale = myTrans.localScale;
+
+            theScale.x *= -1;
+
+            myTrans.localScale = theScale;
+
 			direction = direction * -1;
 		}
 	}
