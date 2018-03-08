@@ -212,7 +212,6 @@ public class PlayerController : Singleton<PlayerController>
             PlayerHit(25);
         }
 		if (collision.gameObject.CompareTag("Boss") && GameController.Instance.levelOver != true) {
-			Debug.Log ("Player hit by boss");
 			PlayerHit (50);
 		}
 
@@ -221,9 +220,7 @@ public class PlayerController : Singleton<PlayerController>
         ///</Michael>
         if (collision.gameObject.tag == "Boundary")
         {
-            anim.Play("Dead");
-            GameController.Instance.levelOver = true;
-            GameController.Instance.PlayerDied();
+			PlayerHit (100);
         }
         ///</Michael>
         ///If the player touches a moving platform, they
