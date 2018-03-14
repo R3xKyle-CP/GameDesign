@@ -22,8 +22,10 @@ GameObject:
   - component: {fileID: 212594285504934068}
   - component: {fileID: 95972478364696852}
   - component: {fileID: 50272817221241188}
-  - component: {fileID: 61273963688415992}
   - component: {fileID: 114083304013803254}
+  - component: {fileID: 61273963688415992}
+  - component: {fileID: 58711388654007690}
+  - component: {fileID: 58115401996913062}
   m_Layer: 13
   m_Name: Robot_Boss
   m_TagString: Boss
@@ -64,6 +66,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &58115401996913062
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1851370564803652}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 4.2
+--- !u!58 &58711388654007690
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1851370564803652}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 4.2
 --- !u!61 &61273963688415992
 BoxCollider2D:
   m_ObjectHideFlags: 1

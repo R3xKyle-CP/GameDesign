@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <Donovan>
+/// Script that controls the boss
+/// </Donovan>
 public class Boss : MonoBehaviour {
 
 	public Animator anim;
@@ -60,7 +64,7 @@ public class Boss : MonoBehaviour {
 			}
 		}
 
-		if (live <= 30) {
+		if (live <= 40) {
 			isRunning = true;
 
 			if (isIdle) 
