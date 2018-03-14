@@ -116,7 +116,7 @@ public class PlayerController : Singleton<PlayerController>
 
             }
         }
-        if (battery >= 75)
+        /*if (battery >= 75)
         {
             light.intensity = lightIntesity;
         }
@@ -131,7 +131,8 @@ public class PlayerController : Singleton<PlayerController>
         else if (battery <= 25 && battery > 0)
         {
             light.intensity = lightIntesity * .4f;
-        }
+        }*/
+		light.intensity = (float)(lightIntesity * (battery / 80.0));
     }
     ///<Michael>
     ///Move the player and call the animations corresponding to the movement
@@ -342,6 +343,10 @@ public class PlayerController : Singleton<PlayerController>
     {
         return battery;
     }
+	public void fullBattery()
+	{
+		this.battery = 100;
+	}
 	public int GetMemory()
 	{
 		return memory;

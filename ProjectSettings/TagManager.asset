@@ -76,3 +76,6 @@ TagManager:
   - name: Player
     uniqueID: 3971027591
     locked: 0
+  - name: Drawing
+    uniqueID: 3305480631
+    locked: 0
