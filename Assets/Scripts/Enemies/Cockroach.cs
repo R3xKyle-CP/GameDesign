@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//Jiaqing
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Prime31;
@@ -7,7 +8,6 @@ public class Cockroach : MonoBehaviour {
 	    //private CharacterController2D controller;
 	    float horizontalSpeed = 3f ;
 	    public int moveright = 0;
-	    bool isDead = false;
 	    public Transform wallCheck;
 	    public float wallCheckRadius;
 	    private bool hittingWall;

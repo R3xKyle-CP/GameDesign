@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//Jiaqing
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +7,6 @@ public class Bat : MonoBehaviour {
 	private Animator anim;
     private Collider2D col;
 	float horizontalSpeed;
-	bool isDead = false;
 	float live = 100;
 	bool following = false;
     public float speed;

@@ -1,4 +1,5 @@
-﻿/* Written by Kaz Crowe */
+﻿
+//Jiaqing
 /* SimpleHealthBar.cs */
 using UnityEngine;
 using UnityEngine.UI;

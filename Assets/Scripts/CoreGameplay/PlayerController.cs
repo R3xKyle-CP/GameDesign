@@ -256,6 +256,10 @@ public class PlayerController : Singleton<PlayerController>
 		if (collision.gameObject.tag == "Disk" )
 		{
 			PickUpItemAttributeUpdate(ref memory, collision, GameController.MEMORY);
+			if (memory == 100) {
+				imageController.Instance.showPicture ();
+				//imageController.Instance.showPicture ();
+			}
 		}
         ///<Michael>
         ///if the player collides with a spike of blade, the take damage and bounce up
@@ -357,7 +361,8 @@ public class PlayerController : Singleton<PlayerController>
     void PickUpItemAttributeUpdate(ref int playerAttribute, Collider2D collider, int attribute)
     {
         if (playerAttribute >= 100)
-        {
+		{
+			Destroy(collider.gameObject);
             return;
         }
 
