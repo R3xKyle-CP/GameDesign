@@ -86,7 +86,14 @@ public class PlayerController : Singleton<PlayerController>
         ///Get "horizontal" input from player and call the Move() function to move player
         ///Flip the player when changing directions
         ///</Michael>
-        isGrounded = Physics2D.Linecast(myTrans.position, tagGround.position,playerMask);
+        if(GameController.Instance.cheats == true){
+            health = 100;
+            battery = 100;
+            isGrounded = true;
+        }else{
+            isGrounded = Physics2D.Linecast(myTrans.position, tagGround.position, playerMask);
+        }
+
         float horizontalSpeed = Input.GetAxisRaw("Horizontal");
         Move(horizontalSpeed);
         Flip(horizontalSpeed);

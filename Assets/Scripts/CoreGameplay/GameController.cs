@@ -17,7 +17,9 @@ public class GameController : Singleton<GameController> {
 	public SimpleHealthBar healthBar;
 	public SimpleHealthBar shieldBar;
 	public Text memoryBarText;
+    public GameObject cheatsOn;
     private GameController() { }
+    public bool cheats = false;
 
     ///</Michael>
     ///If the player is dead, the can press the mouse button to restart the level
@@ -32,6 +34,18 @@ public class GameController : Singleton<GameController> {
             int enemyLayer = LayerMask.NameToLayer("Enemy");
             int playerLayer = LayerMask.NameToLayer("Player");
             Physics2D.IgnoreLayerCollision(enemyLayer, playerLayer,false);
+        }
+        if(Input.GetKeyDown(KeyCode.C)){
+            
+            if(cheats==false){
+                Debug.Log("cheats on");
+                cheats = true;
+                cheatsOn.SetActive(true);
+            }else{
+                Debug.Log("cheats off");
+                cheats = false;
+                cheatsOn.SetActive(false);
+            }
         }
     }	
     ///<Kyle>
