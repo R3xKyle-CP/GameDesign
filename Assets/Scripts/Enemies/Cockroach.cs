@@ -33,6 +33,7 @@ public class Cockroach : MonoBehaviour {
 			            anim.Play ("Die");
                         col.enabled = false;
                         rb2d.gravityScale = 0;
+						Destroy (this.gameObject, 2);
 			            //Destroy (this);
 			        }
 			else{

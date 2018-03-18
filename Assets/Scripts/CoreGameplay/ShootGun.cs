@@ -34,8 +34,11 @@ public class ShootGun : Singleton<ShootGun> {
 			shootDirection.z = 0.0f;
 			shootDirection = Camera.main.ScreenToWorldPoint(shootDirection);
 			shootDirection = shootDirection-transform.position;
+
 			//...instantiating the bullet
-			GameObject bulletInstance = (GameObject)Instantiate(projectile, transform.position, Quaternion.Euler(new Vector3(0,0,0))) ;
+			GameObject bulletInstance = (GameObject)Instantiate(projectile, transform.position + (Vector3)(shootDirection * 0.5f), Quaternion.Euler(new Vector3(0,0,0))) ;
+
+
 			bulletInstance.GetComponent<Rigidbody2D>().velocity = new Vector2(shootDirection.x * velocity, shootDirection.y * velocity);
 			StartCoroutine (CanShoot());
 

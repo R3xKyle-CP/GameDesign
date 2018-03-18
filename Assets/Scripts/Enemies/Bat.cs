@@ -28,7 +28,7 @@ public class Bat : MonoBehaviour {
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (0f, 0f);
 			anim.Play ("die");
             col.enabled = false;
-			//Destroy (this);
+			Destroy (this.gameObject,2);
 		} else {
 			anim.Play ("idle");
 			float distance = Vector3.Distance (PlayerController.Instance.transform.position, transform.position);
