@@ -209,9 +209,9 @@ public class PlayerController : Singleton<PlayerController>
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        ///<Annie>
-        ///
-        ///</Annie>
+		/// <Jiaqing >
+		/// enemies damage
+		/// </Jiaqing>
 		if(collision.gameObject.tag == "Cockroach" && collision.gameObject.GetComponent<Cockroach>().getLive()>0  && GameController.Instance.levelOver != true){
             PlayerHit(25);
         }
@@ -344,7 +344,9 @@ public class PlayerController : Singleton<PlayerController>
 
 
     }
-
+	/// <Jiaqing >
+	/// getters for private variables
+	/// </Jiaqing>
     public int GetHealth()
     {
         return health;

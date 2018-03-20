@@ -1,6 +1,6 @@
-﻿
-//Jiaqing
-/* SimpleHealthBar.cs */
+﻿/// <Jiaqing >
+/// Control the health bar
+/// </Jiaqing>
 using UnityEngine;
 using UnityEngine.UI;
 

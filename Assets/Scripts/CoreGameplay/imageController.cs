@@ -1,4 +1,6 @@
-﻿//Jiaqing
+﻿/// <Jiaqing >
+/// control the stort pictures
+/// </Jiaqing>
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

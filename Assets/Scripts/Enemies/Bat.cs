@@ -1,4 +1,6 @@
-﻿//Jiaqing
+﻿/// <Jiaqing >
+/// Make the bat following the player
+/// </Jiaqing>
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

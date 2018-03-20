@@ -27,9 +27,9 @@ public class Bullet : MonoBehaviour {
 			
 			collision.gameObject.GetComponent<Boss> ().decreaseLive ();
 		}
-		///<MichaelAnnie>
+		///<Michael Jiaqing>
 		//Otherwise the bullet is set as inactive
-		///</MichaelAnnie>
+		///</Michael Jiaqing>
 		if (!collision.gameObject.CompareTag ("Player") ){
 			anim.Play ("Explode1");
 			Destroy(this.gameObject,1);

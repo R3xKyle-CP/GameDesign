@@ -1,4 +1,6 @@
-﻿//Kyle wrote this script
+﻿/// <Jiaqing Kyle>
+/// Control the scenes
+/// </Jiaqing Kyle>
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

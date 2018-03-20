@@ -20,12 +20,12 @@ public class ShootGun : Singleton<ShootGun> {
 		anim = GetComponent<Animator> ();
 	}
 
-	///<MichaelJiaqing>
+	///<Michael Jiaqing>
 	///Shoot a bullet when the right mouse button is clicked
 	///Bullet is shot towards the direction of the mouse cursor
 	///Michael did shooting logic, instantiating the bullet
 	///Jiaqing did the shoot on right clicj and shoot towards cursor
-	///</MichaelJiaqing>
+	///</Michael Jiaqing>
 	void Update () { 
 		/* shoot the bullet in the direction of the right mouse click*/
 		if (Input.GetMouseButtonDown(1) && canShoot ){

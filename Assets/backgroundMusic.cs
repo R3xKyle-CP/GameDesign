@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿/// <Jiaqing >
+/// control the background music
+/// </Jiaqing>
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

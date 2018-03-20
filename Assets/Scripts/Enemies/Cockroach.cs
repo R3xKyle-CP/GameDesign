@@ -1,4 +1,6 @@
-﻿//Jiaqing
+﻿/// <Jiaqing >
+/// Make the cockroach following the player, keep it from falling off platform
+/// </Jiaqing>
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
