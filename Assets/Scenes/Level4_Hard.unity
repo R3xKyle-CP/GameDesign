@@ -24984,7 +24984,7 @@ Prefab:
     - target: {fileID: 114674688746076424, guid: df0d05ce1fd8b49b496a189cd9b0b878,
         type: 2}
       propertyPath: nextLevel
-      value: Boss
+      value: Level5_SuperHard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: df0d05ce1fd8b49b496a189cd9b0b878, type: 2}
