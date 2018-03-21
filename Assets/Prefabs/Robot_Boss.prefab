@@ -155,6 +155,8 @@ MonoBehaviour:
   myTrans: {fileID: 0}
   direction: -1
   live: 100
+  moveSpeed: 10
+  hitSound: {fileID: 0}
   bossAct: 0
 --- !u!212 &212594285504934068
 SpriteRenderer:

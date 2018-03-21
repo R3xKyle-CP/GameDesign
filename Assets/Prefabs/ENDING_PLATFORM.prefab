@@ -125,7 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55bab800f20f450da8ee6e4c77c6f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelOverText: {fileID: 0}
+  levelOverText: {fileID: 1532229133492786, guid: c4d59acbda0c248c58fd072fb551ad16,
+    type: 2}
   nextLevel: Level4_Hard
 --- !u!212 &212761700702862682
 SpriteRenderer:
