@@ -14,11 +14,6 @@ public class LevelComplete : MonoBehaviour
     public string nextLevel;
     private bool levelDone = false;
 
-	void Start()
-	{
-		levelOverText.SetActive (false);
-	}
-
 	private void Update()
 	{
         if (levelDone && Input.GetMouseButtonDown(0))

@@ -16,16 +16,17 @@ public class Boss : MonoBehaviour {
 	public int direction = 1;
 	public float live = 100;
 
-	public float moveSpeed = 10f;
-
-	AudioSource fxSound;
-	public AudioClip hitSound;
+	private float moveSpeed = 10f;
+	private float timeIdle = 4f;
+	private float move = 0.0f;
+	private bool isRunning = false;
+	private bool isIdle = false;
 
 
 	public enum BossActions{
 		BossWalk,
 		BossRun,
-
+		BossIdle
 	}
 
 	public BossActions bossAct = BossActions.BossWalk;
@@ -36,7 +37,6 @@ public class Boss : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		rb2d = GetComponent<Rigidbody2D> ();
 		col = GetComponent<Collider2D> ();
-		fxSound = GetComponent<AudioSource> ();
 	}
 
 	// Update is called once per frame
@@ -45,7 +45,6 @@ public class Boss : MonoBehaviour {
 			rb2d.velocity = new Vector2 (0f, 0f);
 			anim.Play ("Boss_Dying");
 			col.enabled = false;
-			Destroy (this.gameObject, 1.3f);
 		} 
 		else 
 		{
@@ -58,11 +57,20 @@ public class Boss : MonoBehaviour {
 			case BossActions.BossRun:
 				BossRunning ();
 				break;
+
+			case BossActions.BossIdle:
+				BossIdle ();
+				break;
 			}
 		}
 
 		if (live <= 40) {
-			bossAct = BossActions.BossRun;
+			isRunning = true;
+
+			if (isIdle) 
+				bossAct = BossActions.BossIdle;
+			else
+				bossAct = BossActions.BossRun;
 		}
 	}
 
@@ -98,6 +106,12 @@ public class Boss : MonoBehaviour {
 		}
 	}
 
+	void BossIdle()
+	{
+		rb2d.velocity = new Vector2 (0f, 0f);
+		anim.Play ("Boss_Idle");
+	}
+
 	public void decreaseLive()
 	{
 		Debug.Log ("Decreased Boss Life");
@@ -116,11 +130,5 @@ public class Boss : MonoBehaviour {
 
 			direction = direction * -1;
 		}
-	}
-
-	void OnCollisionEnter2D(Collision2D collision)
-	{
-		if (collision.gameObject.tag == "Player")
-			fxSound.Play ();
 	}
 }
