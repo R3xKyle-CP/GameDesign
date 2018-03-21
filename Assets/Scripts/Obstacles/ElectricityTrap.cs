@@ -39,6 +39,6 @@ public class ElectricityTrap : MonoBehaviour {
     ///</Michael>
     private void OnTriggerEnter2D()
     {
-        PlayerController.Instance.PlayerHit(25);
+        PlayerController.Instance.PlayerHit(10);
     }
 }
