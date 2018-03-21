@@ -21,9 +21,6 @@ public class PlayerController : Singleton<PlayerController>
 
     public float hurtTime = 3f;
 
-	AudioSource fxSound;
-	public AudioClip jumpSound;
-
     // private player attribute values
     private int battery;
     private int health;
@@ -62,7 +59,6 @@ public class PlayerController : Singleton<PlayerController>
         anim = GetComponent<Animator>();
         light = GetComponentInChildren<Light>();
         lightIntesity = light.intensity;
-		fxSound = GetComponent<AudioSource> ();
 
     }
 
@@ -194,7 +190,6 @@ public class PlayerController : Singleton<PlayerController>
     public void Jump(){
         if(isGrounded){
             myBody.velocity += jumpHeight * Vector2.up;
-			fxSound.Play ();
         }
 
     }
@@ -218,14 +213,14 @@ public class PlayerController : Singleton<PlayerController>
 		/// enemies damage
 		/// </Jiaqing>
 		if(collision.gameObject.tag == "Cockroach" && collision.gameObject.GetComponent<Cockroach>().getLive()>0  && GameController.Instance.levelOver != true){
-            PlayerHit(10);
+            PlayerHit(25);
         }
 		if (collision.gameObject.tag == "Bat" && collision.gameObject.GetComponent<Bat>().getLive()>0 && GameController.Instance.levelOver != true)
         {
-            PlayerHit(10);
+            PlayerHit(25);
         }
 		if (collision.gameObject.CompareTag("Boss") && GameController.Instance.levelOver != true) {
-			PlayerHit (25);
+			PlayerHit (50);
 		}
 
         ///<Michael>
@@ -289,7 +284,7 @@ public class PlayerController : Singleton<PlayerController>
             myBody.velocity = new Vector2(0, 0);
             Vector2 pushBack = new Vector2(0, 7);
             myBody.AddForce(pushBack, ForceMode2D.Impulse);
-            PlayerHit(10);
+            PlayerHit(25);
         }
 
     }
