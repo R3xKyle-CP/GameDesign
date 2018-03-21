@@ -21,6 +21,9 @@ public class PlayerController : Singleton<PlayerController>
 
     public float hurtTime = 3f;
 
+	AudioSource fxSound;
+	public AudioClip jumpSound;
+
     // private player attribute values
     private int battery;
     private int health;
@@ -59,7 +62,7 @@ public class PlayerController : Singleton<PlayerController>
         anim = GetComponent<Animator>();
         light = GetComponentInChildren<Light>();
         lightIntesity = light.intensity;
-
+		fxSound = GetComponent<AudioSource> ();
     }
 
     void Start()
@@ -190,6 +193,7 @@ public class PlayerController : Singleton<PlayerController>
     public void Jump(){
         if(isGrounded){
             myBody.velocity += jumpHeight * Vector2.up;
+			fxSound.Play ();
         }
 
     }
